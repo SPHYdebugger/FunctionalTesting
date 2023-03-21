@@ -32,6 +32,14 @@ public class MainLidl {
         List<WebElement> total = driver.findElements(By.xpath("//*[@id=\"product-search-results\"]/article/div[2]/div/*"));
         System.out.println(total.size());
 
+        String title = driver.getTitle();
+        System.out.println(title);
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        WebElement submitButton2 = driver.findElement(By.xpath("/html/body/div[2]/div[1]/section[3]/div/div[2]/article/div[2]/div/div[3]/section/div/div/form/button"));
+        submitButton2.click();
+
         Thread.sleep(5000);
 
 
