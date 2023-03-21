@@ -20,7 +20,14 @@ public class MainLidl {
         driver.manage().window().maximize();
         driver.get("http://www.lidl.es");
 
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
+        WebElement submitButton = driver.findElement(By.className("cookie-alert-extended-button"));
+        submitButton.click();
+
+        Thread.sleep(5000);
+
+
+        driver.quit();
     }
-
 }
