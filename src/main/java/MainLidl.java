@@ -25,6 +25,13 @@ public class MainLidl {
         WebElement submitButton = driver.findElement(By.className("cookie-alert-extended-button"));
         submitButton.click();
 
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
+        driver.findElement(By.id("mainsearch-input")).sendKeys("sandwichera" + Keys.ENTER);
+
+        List<WebElement> total = driver.findElements(By.xpath("//*[@id=\"product-search-results\"]/article/div[2]/div/*"));
+        System.out.println(total.size());
+
         Thread.sleep(5000);
 
 
