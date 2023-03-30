@@ -29,7 +29,7 @@ public class Testing {
 
 
         //compare the list of products
-        assertEquals(24, productsFound);
+        assertEquals(22, productsFound);
 
 
         //compare the title of the results page

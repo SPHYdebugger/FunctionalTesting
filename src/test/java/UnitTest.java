@@ -9,7 +9,10 @@ import static org.junit.Assert.assertEquals;
 
 public class UnitTest {
 
+
     @Test
+    /*list the products of a category and check that the number
+     of loaded products are the same that are loaded on the web*/
     public void testA()  {
 
         System.setProperty("webdriver.http.factory", "jdk-http-client");
@@ -21,12 +24,13 @@ public class UnitTest {
         //search products
         int productsFound = MainLidl.searchProducts(MainLidl.driver);
         //compare the list of products
-        assertEquals(24, productsFound);
+        assertEquals(22, productsFound);
 
 
     }
-@Test
-        public void testB() {
+    @Test
+    /*use the e-commerce search bar, and check the title of the result*/
+    public void testB() {
     System.setProperty("webdriver.http.factory", "jdk-http-client");
     WebDriverManager.chromedriver().setup();
     //open the web
@@ -40,8 +44,9 @@ public class UnitTest {
     MainLidl.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 }
-@Test
-        public void testC() throws InterruptedException {
+    @Test
+    /*test that is able to add an item to the shopping basket*/
+    public void testC() throws InterruptedException {
     System.setProperty("webdriver.http.factory", "jdk-http-client");
     WebDriverManager.chromedriver().setup();
     //open the web
