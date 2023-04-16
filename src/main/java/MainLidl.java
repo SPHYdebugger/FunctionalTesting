@@ -31,7 +31,7 @@ public class MainLidl {
 
     }
     public static int searchProducts (WebDriver driver){
-        driver.findElement(By.id("mainsearch-input")).sendKeys("sandwichera" + Keys.ENTER);
+        driver.findElement(By.id("mainsearch-input")).sendKeys("freidora" + Keys.ENTER);
         List<WebElement> total = driver.findElements(By.xpath("//*[@id=\"product-search-results\"]/article/div[2]/div/*"));
         int numProducts = total.size();
         return numProducts;
