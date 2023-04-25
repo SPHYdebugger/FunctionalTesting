@@ -1,10 +1,11 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import java.time.Duration;
 import java.util.List;
-import static org.junit.Assert.assertEquals;
+
 
 
 public class UnitTest {
@@ -24,7 +25,7 @@ public class UnitTest {
         //search products
         int productsFound = MainLidl.searchProducts(MainLidl.driver);
         //compare the list of products
-        assertEquals(17, productsFound);
+        Assertions.assertEquals(17, productsFound);
 
 
     }
@@ -41,7 +42,7 @@ public class UnitTest {
     MainLidl.searchProducts(MainLidl.driver);
     //compare the title of the results page
     String pageTitle = MainLidl.getTitle(MainLidl.driver);
-    assertEquals("Resultado de búsqueda | Lidl", pageTitle);
+    Assertions.assertEquals("Resultado de búsqueda | Lidl", pageTitle);
     MainLidl.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 }
@@ -63,7 +64,7 @@ public class UnitTest {
     MainLidl.driver.get("https://www.lidl.es/es/basket/contents");
     List<WebElement> findProduct = MainLidl.driver.findElements(By.xpath("/html/body/div[2]/div[1]/section[3]/div[2]/div/article/div/table/tbody/tr/td[1]/div[2]/div/h4/a"));
     System.out.println(findProduct.size());
-    assertEquals(1, findProduct.size());
+    Assertions.assertEquals(1, findProduct.size());
 
 
         //close the browser
