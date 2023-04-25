@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
-
+import java.util.NoSuchElementException;
 
 
 public class UnitTest {
@@ -24,9 +24,14 @@ public class UnitTest {
     wait = new WebDriverWait(MainLidl.driver, Duration.ofSeconds(10));
     //open the web
     MainLidl.openWeb(MainLidl.driver);
-    //accept the cookies
-    wait.until(ExpectedConditions.elementToBeClickable(By.className("cookie-alert-extended-button")));
-    MainLidl.acceptCookies(MainLidl.driver);
+    try {
+        //accept the cookies
+        wait.until(ExpectedConditions.elementToBeClickable(By.className("cookie-alert-extended-button")));
+        MainLidl.acceptCookies(MainLidl.driver);
+    }catch (NoSuchElementException e){
+        System.out.println("El botón COOKIES no se ha encontrado en la página.");
+    }
+
     MainLidl.driver.manage().window().maximize();
 }
 @AfterEach
