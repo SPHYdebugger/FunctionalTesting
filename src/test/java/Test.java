@@ -49,7 +49,7 @@ public class Test {
 
 
         //close the browser
-        MainLidl.driver.quit();
+        //MainLidl.driver.quit();
     }
 
 }
