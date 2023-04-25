@@ -16,7 +16,7 @@ public class Base {
     public Base(WebDriver driver){
         this.driver = driver;
     }
-    public WebDriver chormeDriverConnection(){
+    public WebDriver chromeDriverConnection(){
         System.setProperty("webdriver.http.factory", "jdk-http-client");
         driver = new ChromeDriver();
         return driver;
