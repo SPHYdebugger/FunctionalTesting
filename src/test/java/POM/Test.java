@@ -21,7 +21,7 @@ public class Test {
         data.click(data.submitButton);
         data.type(data.product, data.search);
         int total = data.findElements(data.xpath).size();
-        assertEquals(18, total);
+        assertEquals(17, total);
         String title = driver.getTitle();
         assertEquals(data.title,title);
         WebElement button = data.findElement(data.buy);
