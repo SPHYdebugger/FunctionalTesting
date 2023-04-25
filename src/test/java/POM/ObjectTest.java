@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.time.Duration;
 import static org.junit.Assert.assertEquals;
 
-public class Test {
+public class ObjectTest {
 
     private WebDriver driver;
 
