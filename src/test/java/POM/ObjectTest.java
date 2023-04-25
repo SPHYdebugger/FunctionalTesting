@@ -34,7 +34,7 @@ public class ObjectTest {
         data.type(data.product, data.search);
         int total = data.findElements(data.xpath).size();
         Assertions.assertEquals(17, total);
-        /*
+
         String title = driver.getTitle();
         Assertions.assertEquals(data.title, title);
         WebElement button = data.findElement(data.buy);
@@ -43,7 +43,7 @@ public class ObjectTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div[1]/section[3]/div[2]/div/article/div/table/tbody/tr/td[1]/div[2]/div/h4/a")));
         int productsBought = data.findElements(data.bought).size();
         Assertions.assertEquals(1, productsBought);
-        */
+        
 
         driver.quit();
     }
