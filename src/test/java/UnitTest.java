@@ -1,5 +1,6 @@
+import com.sun.tools.javac.Main;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -10,18 +11,32 @@ import java.util.List;
 
 public class UnitTest {
 
+@BeforeAll
+    public static void starDriver(){
+    System.setProperty("webdriver.http.factory", "jdk-http-client");
+    WebDriverManager.chromedriver().setup();
+    //open the web
+    MainLidl.openWeb(MainLidl.driver);
+    //accept the cookies
+    MainLidl.acceptCookies(MainLidl.driver);
+    MainLidl.driver.manage().window().maximize();
+}
+@AfterEach
+    public void returnPage(){
+    MainLidl.openWeb(MainLidl.driver);
+}
+@AfterAll
+    public static void shutdown(){
+    MainLidl.driver.quit();
+}
 
     @Test
     /*list the products of a category and check that the number
      of loaded products are the same that are loaded on the web*/
     public void testA()  {
 
-        System.setProperty("webdriver.http.factory", "jdk-http-client");
-        WebDriverManager.chromedriver().setup();
-        //open the web
-        MainLidl.openWeb(MainLidl.driver);
-        //accept the cookies
-        MainLidl.acceptCookies(MainLidl.driver);
+
+
         //search products
         int productsFound = MainLidl.searchProducts(MainLidl.driver);
         //compare the list of products
@@ -36,7 +51,7 @@ public class UnitTest {
     WebDriverManager.chromedriver().setup();
     //open the web
 
-    // MainLidl.openWeb(MainLidl.driver);
+    MainLidl.openWeb(MainLidl.driver);
 
     //search products
     MainLidl.searchProducts(MainLidl.driver);
@@ -52,7 +67,7 @@ public class UnitTest {
     System.setProperty("webdriver.http.factory", "jdk-http-client");
     WebDriverManager.chromedriver().setup();
     //open the web
-    //MainLidl.openWeb(MainLidl.driver);
+    MainLidl.openWeb(MainLidl.driver);
 
     //search products
     MainLidl.searchProducts(MainLidl.driver);
@@ -68,7 +83,7 @@ public class UnitTest {
 
 
         //close the browser
-        MainLidl.driver.quit();
+
     }
 
 }

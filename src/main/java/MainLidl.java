@@ -1,4 +1,4 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -19,7 +19,7 @@ public class MainLidl {
 
     public static void openWeb (WebDriver driver){
 
-        driver.manage().window().maximize();
+
         driver.get("http://www.lidl.es");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
