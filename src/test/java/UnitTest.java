@@ -34,7 +34,8 @@ public class UnitTest {
     System.setProperty("webdriver.http.factory", "jdk-http-client");
     WebDriverManager.chromedriver().setup();
     //open the web
-    MainLidl.openWeb(MainLidl.driver);
+
+    // MainLidl.openWeb(MainLidl.driver);
 
     //search products
     MainLidl.searchProducts(MainLidl.driver);
@@ -50,7 +51,7 @@ public class UnitTest {
     System.setProperty("webdriver.http.factory", "jdk-http-client");
     WebDriverManager.chromedriver().setup();
     //open the web
-    MainLidl.openWeb(MainLidl.driver);
+    //MainLidl.openWeb(MainLidl.driver);
 
     //search products
     MainLidl.searchProducts(MainLidl.driver);
