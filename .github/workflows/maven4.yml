@@ -2,31 +2,33 @@ name: Lint
 
 on:
   push:
-    branches: [ "master", "main" ]
+    branches: [ "master","main" ]
   pull_request:
-    branches: [ "master", "main" ]
+    branches: [ "master","main" ]
 
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-        
-    - name: Setup Java
-      uses: actions/setup-java@v2
+    - uses: actions/checkout@v3
+    - name: Lint
+      uses: actions/setup-java@v3
       with:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-          
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-          
+      
+    - name: Run tests
+      run: mvn -B test
+      
     - name: Lint Code Base
       uses: github/super-linter/slim@v4
       env:
         VALIDATE_ALL_CODEBASE: true
-        DEFAULT_BRANCH: 'master'
+        DEFAULT_BRANCH: master
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
