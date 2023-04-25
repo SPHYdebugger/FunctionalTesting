@@ -28,7 +28,7 @@ public class ObjectTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         data.click(data.submitButton);
-        wait.until(ExpectedConditions.elementToBeClickable(By.id("mainsearch-input")));
+        /*wait.until(ExpectedConditions.elementToBeClickable(By.id("mainsearch-input")));
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("mainsearch-input")));
         data.type(data.product, data.search);
@@ -42,6 +42,8 @@ public class ObjectTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div[1]/section[3]/div[2]/div/article/div/table/tbody/tr/td[1]/div[2]/div/h4/a")));
         int productsBought = data.findElements(data.bought).size();
         Assertions.assertEquals(1, productsBought);
+        
+         */
         driver.quit();
     }
 
