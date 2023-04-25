@@ -1,9 +1,12 @@
-import com.sun.tools.javac.Main;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.time.Duration;
 import java.util.List;
 
@@ -11,13 +14,18 @@ import java.util.List;
 
 public class UnitTest {
 
+
+
 @BeforeAll
     public static void starDriver(){
+    WebDriverWait wait;
     System.setProperty("webdriver.http.factory", "jdk-http-client");
     WebDriverManager.chromedriver().setup();
+    wait = new WebDriverWait(MainLidl.driver, Duration.ofSeconds(10));
     //open the web
     MainLidl.openWeb(MainLidl.driver);
     //accept the cookies
+    wait.until(ExpectedConditions.elementToBeClickable(By.className("cookie-alert-extended-button")));
     MainLidl.acceptCookies(MainLidl.driver);
     MainLidl.driver.manage().window().maximize();
 }
