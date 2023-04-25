@@ -1,5 +1,4 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import java.time.Duration;
@@ -7,9 +6,9 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 
-public class Testing {
+public class Test {
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void testingWeb() throws InterruptedException {
         System.setProperty("webdriver.http.factory", "jdk-http-client");
         WebDriverManager.chromedriver().setup();
