@@ -25,8 +25,8 @@ public class UnitTest {
     //open the web
     MainLidl.openWeb(MainLidl.driver);
     //accept the cookies
-    //wait.until(ExpectedConditions.elementToBeClickable(By.className("cookie-alert-extended-button")));
-    //MainLidl.acceptCookies(MainLidl.driver);
+    wait.until(ExpectedConditions.elementToBeClickable(By.className("cookie-alert-extended-button")));
+    MainLidl.acceptCookies(MainLidl.driver);
     MainLidl.driver.manage().window().maximize();
 }
 @AfterEach

@@ -43,7 +43,7 @@ public class ObjectTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div[1]/section[3]/div[2]/div/article/div/table/tbody/tr/td[1]/div[2]/div/h4/a")));
         int productsBought = data.findElements(data.bought).size();
         Assertions.assertEquals(1, productsBought);
-        
+
 
         driver.quit();
     }
