@@ -28,6 +28,8 @@ public class ObjectTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         data.click(data.submitButton);
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("mainsearch-input")));
+
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("mainsearch-input")));
         data.type(data.product, data.search);
         int total = data.findElements(data.xpath).size();
