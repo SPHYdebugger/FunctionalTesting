@@ -33,7 +33,7 @@ public class ObjectTest {
         //wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("mainsearch-input")));
         data.type(data.product, data.search);
         int total = data.findElements(data.xpath).size();
-        Assertions.assertEquals(17, total);
+        Assertions.assertEquals(21, total);
 
         String title = driver.getTitle();
         Assertions.assertEquals(data.title, title);

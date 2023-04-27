@@ -28,7 +28,7 @@ public class Test {
 
 
         //compare the list of products
-        assertEquals(17, productsFound);
+        assertEquals(21, productsFound);
 
 
         //compare the title of the results page

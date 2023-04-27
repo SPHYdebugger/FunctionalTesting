@@ -53,7 +53,7 @@ public class UnitTest {
         //search products
         int productsFound = MainLidl.searchProducts(MainLidl.driver);
         //compare the list of products
-        Assertions.assertEquals(17, productsFound);
+        Assertions.assertEquals(21, productsFound);
 
 
     }
