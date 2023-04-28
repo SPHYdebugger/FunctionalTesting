@@ -32,6 +32,8 @@ public class UnitTest {
         System.out.println("El botón COOKIES no se ha encontrado en la página.");
     }
 
+     
+
     MainLidl.driver.manage().window().maximize();
 }
 @AfterEach
