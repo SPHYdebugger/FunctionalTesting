@@ -24,15 +24,13 @@ public class UnitTest {
     wait = new WebDriverWait(MainLidl.driver, Duration.ofSeconds(10));
     //open the web
     MainLidl.openWeb(MainLidl.driver);
-    try {
-        //accept the cookies
-        wait.until(ExpectedConditions.elementToBeClickable(By.className("cookie-alert-extended-button")));
-        MainLidl.acceptCookies(MainLidl.driver);
-    }catch (NoSuchElementException e){
-        System.out.println("El botón COOKIES no se ha encontrado en la página.");
-    }
 
-     
+        //accept the cookies
+        //wait.until(ExpectedConditions.elementToBeClickable(By.className("cookie-alert-extended-button")));
+        //MainLidl.acceptCookies(MainLidl.driver);
+
+
+
 
     MainLidl.driver.manage().window().maximize();
 }
