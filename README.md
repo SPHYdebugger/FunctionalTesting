@@ -28,9 +28,7 @@ Comprobación del contenido del carrito para asegurar que contiene el producto e
 ### Tecnologías Utilizadas
 - **Lenguaje de Programación:** Java 17.
 - **Framework de Pruebas:** JUnit 5 (JUnit Jupiter).
-- **Automatización del Navegador:**
-* Selenium WebDriver (versión 4.8.1).
-* WebDriverManager para gestionar el controlador del navegador.
+- **Automatización del Navegador:** Selenium WebDriver (versión 4.8.1) // WebDriverManager.
 - **Gestión de Dependencias y Construcción:** Maven.
 - **Manejo de Logs:** Log4j para registro de eventos y errores.
 - **Plugin de Maven:** Surefire para ejecutar los casos de prueba.
