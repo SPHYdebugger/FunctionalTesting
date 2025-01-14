@@ -49,6 +49,6 @@ Este proyecto automatiza tareas repetitivas y asegura la calidad de las funciona
 ### Resumen pantallas APP
 ﻿<p align="center">
 <img width="100%" src="compraLidl.jpg">
-<img width="100%" src="resultadomaven.jpg">
+<img width="100%" src="resultado maven.jpg">
 <h1 align="center">Functional Testing JUnit + Selenium</h1>
 </p>
