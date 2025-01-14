@@ -1,6 +1,6 @@
 ﻿<p align="center">
-<img width="400px" src="">
-<h1 align="center"> LastFM APP</h1>
+<img width="400px" src="logo.jpg">
+<h1 align="center">Functional Testing JUnit + Selenium</h1>
 </p>
 
 # Testing Java con pruebas unitarias y prueba global End-to-End sobre la web www.lidl.es
@@ -47,5 +47,5 @@ Este proyecto automatiza tareas repetitivas y asegura la calidad de las funciona
 ### Resumen pantallas APP
 ﻿<p align="center">
 <img width="100%" src="">
-<h1 align="center"> LastFM- Api Desktop Application</h1>
+<h1 align="center">Functional Testing JUnit + Selenium</h1>
 </p>
