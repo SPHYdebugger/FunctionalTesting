@@ -1,5 +1,5 @@
 ﻿<p align="center">
-<img width="400px" src="logo.jpg">
+<img width="600px" src="logo.jpg">
 <h1 align="center">Functional Testing JUnit + Selenium</h1>
 </p>
 
@@ -35,6 +35,8 @@ Comprobación del contenido del carrito para asegurar que contiene el producto e
 - **Manejo de Logs:** Log4j para registro de eventos y errores.
 - **Plugin de Maven:** Surefire para ejecutar los casos de prueba.
 
+<img width="300px" src="junit.jpg"><img width="300px" src="selenium.jpg">
+
 ### Casos de Prueba:
 
 - Prueba end-to-end que verifica múltiples funcionalidades consecutivas (búsqueda de productos, título de la página, y adición al carrito).
@@ -46,6 +48,7 @@ Este proyecto automatiza tareas repetitivas y asegura la calidad de las funciona
 
 ### Resumen pantallas APP
 ﻿<p align="center">
-<img width="100%" src="">
+<img width="100%" src="compraLidl.jpg">
+<img width="100%" src="resultadomaven.jpg">
 <h1 align="center">Functional Testing JUnit + Selenium</h1>
 </p>
